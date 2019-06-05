@@ -32,11 +32,25 @@ public class Jugador extends Persona implements Comparable {
 	}
 	
 	
+	public String toString() {
+		return  this.getNif() + " , " +  this.getNombre() + " , " +  this.getFecha() + " , " +  this.getAltura() + " , " +  String.valueOf(equipo) + " , " +  golesMarcados ;
+
+	}
+	
 	@Override
 	public int compareTo(Object o) {
 		Jugador oJ = (Jugador) o;
 		if(this.getEquipo() > oJ.getEquipo())
-		
+			return 1;
+		if(this.getEquipo() < oJ.getEquipo())
+			return -1;
+		if (this.getEquipo() == oJ.getEquipo()) {
+			if (this.getNombre().compareToIgnoreCase(oJ.getNombre()) >0) {
+				return 1;
+			}else {
+				return -1;
+			}	
+		}
 		return 0;
 	}
 	

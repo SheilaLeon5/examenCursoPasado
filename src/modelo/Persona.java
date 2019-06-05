@@ -32,6 +32,7 @@ public abstract class Persona implements Serializable {
 
 	}
 
+/*
 	@Override
 
 	public String toString() {
@@ -39,6 +40,8 @@ public abstract class Persona implements Serializable {
 		return "persona numero : " + contador + ",  nif : " + this.nif + ", nombre : " + this.nombre + ", sexo : "
 				+ ", fecha : " + this.fecha + ", altura : " + this.altura;
 	}
+	
+*/
 
 	public String getNombre() {
 		return nombre;
